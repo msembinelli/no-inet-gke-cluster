@@ -3,19 +3,19 @@ locals {
 }
 
 provider "google" {
-  version = "2.3.0"
+  version = "2.12.0"
   project = "${var.project_id}"
   region  = "${var.cluster_region}"
 }
 
 provider "google-beta" {
-  version = "2.3.0"
+  version = "2.12.0"
   project = "${var.project_id}"
   region  = "${var.cluster_region}"
 }
 
 module "private_gke_cluster" {
-  source                  = "github.com/terraform-google-modules/terraform-google-kubernetes-engine//modules/private-cluster"
+  source                  = "github.com/terraform-google-modules/terraform-google-kubernetes-engine/modules/private-cluster"
   project_id              = "${var.project_id}"
   name                    = "${var.gke_cluster}"
   regional                = false
