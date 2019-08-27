@@ -1,4 +1,4 @@
-project_id = "leap-blockchain-identity"
+# project_id = ""
 
 cluster_region = "us-west1"
 
